@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.com.cointracker.library.compose)
     alias(libs.plugins.com.cointracker.room)
     alias(libs.plugins.com.cointracker.unittest)
+    alias(libs.plugins.com.cointracker.uitest)
 }
 
 android {
@@ -12,6 +13,4 @@ android {
 dependencies {
     implementation(project(":core:network"))
     implementation(project(":core:database"))
-
-    androidTestImplementation(libs.assertk)
 }

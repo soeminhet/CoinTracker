@@ -79,5 +79,10 @@ gradlePlugin {
             id = "com.cointracker.unittest"
             implementationClass = "AndroidUnitTestConventionPlugin"
         }
+
+        register("androidUITest"){
+            id = "com.cointracker.uitest"
+            implementationClass = "AndroidUITestConventionPlugin"
+        }
     }
 }

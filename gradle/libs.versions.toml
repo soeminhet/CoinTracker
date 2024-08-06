@@ -82,6 +82,7 @@ chucker-release = { module = "com.github.chuckerteam.chucker:library-no-op", ver
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+hilt-android-test = { module = "com.google.dagger:hilt-android-testing", version.ref = "hiltAndroid" }
 
 arrow = { module = "io.arrow-kt:arrow-core", version.ref = "coreArrow" }
 turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
@@ -115,4 +116,5 @@ com-cointracker-feature = { id = "com.cointracker.feature", version.ref = "custo
 com-cointracker-room = { id = "com.cointracker.room", version.ref = "customPlugin" }
 com-cointracker-application = { id = "com.cointracker.application", version.ref = "customPlugin"}
 com-cointracker-unittest = { id = "com.cointracker.unittest", version.ref = "customPlugin"}
+com-cointracker-uitest = { id = "com.cointracker.uitest", version.ref = "customPlugin" }
 

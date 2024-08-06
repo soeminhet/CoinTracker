@@ -53,10 +53,6 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             dependencies {
                 "implementation"(libs.findLibrary("androidx.core.ktx").get())
                 "implementation"(libs.findLibrary("androidx.appcompat").get())
-
-                "testImplementation"(libs.findLibrary("junit").get())
-                "androidTestImplementation"(libs.findLibrary("androidx.junit").get())
-                "androidTestImplementation"(libs.findLibrary("androidx.espresso.core").get())
             }
         }
     }

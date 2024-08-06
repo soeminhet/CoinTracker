@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.com.cointracker.application)
     alias(libs.plugins.com.cointracker.application.compose)
     alias(libs.plugins.com.cointracker.hilt)
+    alias(libs.plugins.com.cointracker.uitest)
 }
 
 android {
@@ -11,6 +12,7 @@ android {
         applicationId = "com.smh.cointracker"
         versionCode = 1
         versionName = "1.0"
+        testInstrumentationRunner = "com.smh.cointracker.HiltTestRunner"
     }
 
     buildTypes {
@@ -37,11 +39,6 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
 
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }
