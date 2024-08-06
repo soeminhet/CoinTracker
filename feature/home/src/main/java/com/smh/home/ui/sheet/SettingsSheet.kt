@@ -36,6 +36,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.smh.design.CoinTrackerSheet
 import com.smh.design.UrlButton
 import com.smh.design.theme.CoinTrackerTheme
@@ -178,7 +179,7 @@ private fun SettingExplainSection(modifier: Modifier = Modifier) {
                 UrlButton(
                     modifier = Modifier.padding(start = dimensions.space4),
                     text = "Subscribe on Youtube",
-                    url = ""
+                    url = "https://www.youtube.com/@SwiftfulThinking"
                 )
 
                 HorizontalDivider()
@@ -186,7 +187,7 @@ private fun SettingExplainSection(modifier: Modifier = Modifier) {
                 UrlButton(
                     modifier = Modifier.padding(start = dimensions.space4),
                     text = "Support his coffee addiction",
-                    url = ""
+                    url = "https://www.buymeacoffee.com/nicksarno"
                 )
             }
         }
@@ -242,7 +243,7 @@ private fun SettingsCoinGeckoSection(modifier: Modifier = Modifier) {
                 UrlButton(
                     modifier = Modifier.padding(start = dimensions.space4),
                     text = "Visit CoinGecko",
-                    url = ""
+                    url = "https://www.coingecko.com"
                 )
             }
         }
@@ -307,6 +308,7 @@ private fun SettingsDeveloperSection(modifier: Modifier = Modifier) {
 }
 
 @DayPreview
+@Preview(heightDp = 2000)
 @Composable
 private fun SettingsContentPreview() {
     CoinTrackerTheme {
@@ -317,6 +319,7 @@ private fun SettingsContentPreview() {
 }
 
 @NightPreview
+@Preview(heightDp = 2000)
 @Composable
 private fun SettingsContentNightPreview() {
     CoinTrackerTheme {
