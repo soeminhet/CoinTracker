@@ -11,8 +11,8 @@ import com.smh.detail.domain.repository.DetailRepository
 import com.smh.detail.domain.usecase.GetCoinDetailUseCase
 import com.smh.detail.fake.DetailRemoteDataSourceFake
 import com.smh.detail.fake.coinDetailModel
-import com.smh.detail.helper.TestCoroutineExtension
 import com.smh.detail.ui.CoinDetailViewModel
+import com.smh.testing.TestCoroutineExtension
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach

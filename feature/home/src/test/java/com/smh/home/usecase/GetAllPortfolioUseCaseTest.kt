@@ -12,8 +12,8 @@ import com.smh.home.domain.usecase.GetAllPortfolioUseCase
 import com.smh.home.fake.HomeRepositoryFake
 import com.smh.home.fake.btcEntity
 import com.smh.home.fake.ethEntity
-import com.smh.home.helper.TestCoroutineExtension
 import com.smh.network.usecase.executeEmpty
+import com.smh.testing.TestCoroutineExtension
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach

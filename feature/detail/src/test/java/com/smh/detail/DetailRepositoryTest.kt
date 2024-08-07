@@ -6,11 +6,10 @@ import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.assertions.isTrue
 import com.smh.detail.data.repository.DetailRepositoryImpl
-import com.smh.detail.domain.model.CoinDetailModel.Companion.btc
 import com.smh.detail.domain.repository.DetailRepository
 import com.smh.detail.fake.DetailRemoteDataSourceFake
-import com.smh.detail.fake.apiException
 import com.smh.detail.fake.coinDetailModel
+import com.smh.testing.apiException
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

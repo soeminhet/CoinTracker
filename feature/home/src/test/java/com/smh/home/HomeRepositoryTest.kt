@@ -7,7 +7,6 @@ import assertk.assertThat
 import assertk.assertions.contains
 import assertk.assertions.isEmpty
 import assertk.assertions.isEqualTo
-import assertk.assertions.isFalse
 import assertk.assertions.isNotEmpty
 import assertk.assertions.isNotEqualTo
 import assertk.assertions.isTrue
@@ -15,15 +14,12 @@ import com.smh.home.data.repository.HomeRepositoryImpl
 import com.smh.home.domain.repository.HomeRepository
 import com.smh.home.fake.HomeLocalDataSourceFake
 import com.smh.home.fake.HomeRemoteDataSourceFake
-import com.smh.home.fake.apiException
 import com.smh.home.fake.btc
 import com.smh.home.fake.btcEntity
 import com.smh.home.fake.eth
 import com.smh.home.fake.ethEntity
 import com.smh.home.fake.global
-import com.smh.network.DataException
-import com.smh.network.ERROR_MESSAGE_GENERAL
-import com.smh.network.ERROR_TITLE_GENERAL
+import com.smh.testing.apiException
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach

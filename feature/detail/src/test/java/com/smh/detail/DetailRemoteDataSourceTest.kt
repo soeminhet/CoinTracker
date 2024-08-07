@@ -15,6 +15,7 @@ import com.smh.network.ERROR_TITLE_GENERAL
 import com.smh.network.createJson
 import com.smh.network.createRetrofitBuilder
 import com.smh.network.createService
+import com.smh.testing.notFoundResponseBody
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.MockResponse
@@ -50,7 +51,7 @@ internal class DetailRemoteDataSourceTest {
 
     @Test
     fun `GetCoinDetail, Response error, exception is Api 404 and NotFound`() = runBlocking {
-        val responseBody = File("src/test/resources/NotFoundResponse.json").readText()
+        val responseBody = notFoundResponseBody
         val response = MockResponse()
             .setResponseCode(404)
             .setBody(responseBody)

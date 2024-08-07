@@ -7,11 +7,11 @@ import assertk.assertions.isEqualTo
 import assertk.assertions.isTrue
 import com.smh.home.domain.usecase.GetGlobalStatisticsUseCase
 import com.smh.home.fake.HomeRepositoryFake
-import com.smh.home.fake.apiException
 import com.smh.home.fake.global
-import com.smh.home.helper.TestCoroutineExtension
 import com.smh.home.ui.model.StatisticModel
 import com.smh.network.usecase.executeEmpty
+import com.smh.testing.TestCoroutineExtension
+import com.smh.testing.apiException
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach

@@ -17,10 +17,10 @@ import com.smh.home.fake.HomeRepositoryFake
 import com.smh.home.fake.btc
 import com.smh.home.fake.btcEntity
 import com.smh.home.fake.eth
-import com.smh.home.helper.TestCoroutineExtension
 import com.smh.home.ui.HomeViewModel
 import com.smh.home.ui.SortOption
 import com.smh.home.utility.CoinSorterAndFilter
+import com.smh.testing.TestCoroutineExtension
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach

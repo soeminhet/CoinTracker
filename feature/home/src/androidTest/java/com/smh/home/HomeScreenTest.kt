@@ -1,14 +1,9 @@
 package com.smh.home
 
 import androidx.activity.ComponentActivity
-import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsNotDisplayed
 import androidx.compose.ui.test.assertTextContains
-import androidx.compose.ui.test.filter
-import androidx.compose.ui.test.hasParent
-import androidx.compose.ui.test.hasTestTag
-import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
@@ -19,8 +14,6 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.ext.junit.rules.ActivityScenarioRule
-import arrow.core.valid
-import assertk.assertThat
 import com.smh.design.theme.CoinTrackerTheme
 import com.smh.home.fake.btc
 import com.smh.home.fake.btcDominanceStat
@@ -29,9 +22,9 @@ import com.smh.home.fake.marketCapStat
 import com.smh.home.fake.portfolioValueStat
 import com.smh.home.fake.usdt
 import com.smh.home.fake.volumeStat
-import com.smh.home.helper.getString
 import com.smh.home.ui.HomeContent
 import com.smh.home.ui.HomeUiState
+import com.smh.testing.getString
 import org.junit.Rule
 import org.junit.Test
 

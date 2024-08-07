@@ -1,4 +1,4 @@
-package com.smh.home.helper
+package com.smh.testing
 
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.test.junit4.AndroidComposeTestRule

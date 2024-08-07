@@ -4,6 +4,7 @@ import arrow.core.Either
 import com.smh.detail.domain.datasource.DetailRemoteDataSource
 import com.smh.detail.domain.model.CoinDetailModel
 import com.smh.network.DataException
+import com.smh.testing.apiException
 
 internal class DetailRemoteDataSourceFake: DetailRemoteDataSource {
 
