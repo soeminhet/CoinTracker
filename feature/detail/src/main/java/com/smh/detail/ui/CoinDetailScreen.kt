@@ -163,7 +163,7 @@ internal fun CoinDetailContent(
                     )
 
                     UrlButton(
-                        text = stringResource(id = R.string.website_label),
+                        text = stringResource(id = R.string.reddit_label),
                         url = detail.redditUrl,
                         modifier = Modifier.padding(horizontal = dimensions.space8)
                     )
