@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -94,7 +95,8 @@ internal fun CoinDetailContent(
                     SparkLine7dChartView(
                         data = detail.sparkline,
                         startDate = "14/06/24",
-                        endDate = "21/06/24"
+                        endDate = "21/06/24",
+                        modifier = Modifier.testTag(stringResource(id = R.string.sparkline_test_tag))
                     )
 
                     CoinDetailTitleText(text = stringResource(id = R.string.overview_title))

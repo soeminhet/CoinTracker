@@ -12,6 +12,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.style.TextOverflow
@@ -21,6 +23,7 @@ import com.smh.design.theme.CoinTrackerTheme
 import com.smh.design.theme.dimensions
 import com.smh.design.utility.DayPreview
 import com.smh.design.utility.NightPreview
+import com.smh.detail.R
 import com.smh.detail.domain.model.CoinDetailModel
 
 @Composable
@@ -32,7 +35,11 @@ fun CoinDetailDescription(
     var expanded by remember { mutableStateOf(false) }
 
     if (text.isNotEmpty()) {
-        Column(modifier = modifier.animateContentSize()) {
+        Column(
+            modifier = modifier
+                .testTag(stringResource(id = R.string.description_test_tag))
+                .animateContentSize()
+        ) {
                 Text(
                     text = AnnotatedString.fromHtml(htmlString = text),
                     style = MaterialTheme.typography.bodyMedium,

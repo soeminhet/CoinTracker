@@ -14,5 +14,8 @@
     <string name="block_time_label">Block Time</string>
     <string name="hashing_algorithm_label">Hashing Algorithm</string>
     <string name="website_label">Website</string>
-    <string name="reddit_label">Reddit</string>"
+    <string name="reddit_label">Reddit</string>
+
+    <string name="sparkline_test_tag">SparkLine</string>
+    <string name="description_test_tag">Description</string>
 </resources>
