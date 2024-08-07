@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="live_prices">Live Prices</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="settings">Settings</string>
+    <string name="edit_portfolio">Edit Portfolio</string>
+
+    <string name="search_placeholder">Search symbol or name</string>
+
+    <string name="toggleShowLivePricesDesc">ToggleShowLivePricesButton</string>
+    <string name="infoAndAddCircleDesc">HomeInfoAndAddCircleButton</string>
+
+    <string name="homeCoinList_test_tag">HomeCoinsList</string>
+</resources>

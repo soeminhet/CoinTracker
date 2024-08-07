@@ -20,11 +20,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import com.smh.design.utility.DayPreview
 import com.smh.design.utility.NightPreview
 import com.smh.design.theme.CoinTrackerTheme
 import com.smh.design.theme.dimensions
+import com.smh.home.R
 import com.smh.home.ui.HomeContentState
 
 @Composable
@@ -55,8 +57,8 @@ fun HomeHeader(
 
         Text(
             text = when(contentState) {
-                HomeContentState.LivePrices -> "Live Prices"
-                HomeContentState.Portfolio -> "Portfolio"
+                HomeContentState.LivePrices -> stringResource(id = R.string.live_prices)
+                HomeContentState.Portfolio -> stringResource(id = R.string.portfolio)
             },
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold
@@ -112,7 +114,8 @@ private fun HomeInfoAndAddCircleButton(
                     alpha = alpha
                 )
             }
-        }
+        },
+        contentDescription = stringResource(id = R.string.infoAndAddCircleDesc)
     )
 }
 
@@ -136,6 +139,7 @@ private fun HomeToggleShowLivePricesCircleButton(
             .graphicsLayer {
                 rotationZ = arrowDegree
             },
+        contentDescription = stringResource(id = R.string.toggleShowLivePricesDesc)
     )
 }
 

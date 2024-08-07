@@ -14,6 +14,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.smh.design.utility.CLAnimationFast
 import com.smh.design.utility.DayPreview
@@ -21,6 +24,7 @@ import com.smh.design.utility.NightPreview
 import com.smh.design.StatisticItem
 import com.smh.design.theme.CoinTrackerTheme
 import com.smh.design.theme.dimensions
+import com.smh.home.R
 import com.smh.home.ui.HomeContentState
 import com.smh.home.ui.model.StatisticModel
 

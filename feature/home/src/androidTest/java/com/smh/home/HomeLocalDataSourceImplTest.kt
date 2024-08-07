@@ -24,9 +24,9 @@ class HomeLocalDataSourceImplTest {
     private lateinit var homeLocalDataSource: HomeLocalDataSource
 
     // Constants
-    val btc = PortfolioEntity(coinId = "btc", amount = 10.0)
-    val eth = PortfolioEntity(coinId = "eth", amount = 3.3)
-    val usdt = PortfolioEntity(coinId = "usdt", amount = 100.12)
+    private val btc = PortfolioEntity(coinId = "btc", amount = 10.0)
+    private val eth = PortfolioEntity(coinId = "eth", amount = 3.3)
+    private val usdt = PortfolioEntity(coinId = "usdt", amount = 100.12)
 
     @Before
     fun setUp() {

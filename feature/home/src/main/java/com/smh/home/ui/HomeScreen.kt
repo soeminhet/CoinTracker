@@ -10,6 +10,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.smh.design.CTAnimatedContent
@@ -18,6 +19,7 @@ import com.smh.design.SearchBar
 import com.smh.design.theme.CoinTrackerTheme
 import com.smh.design.theme.dimensions
 import com.smh.design.utility.DayPreview
+import com.smh.home.R
 import com.smh.home.domain.model.CoinModel
 import com.smh.home.ui.components.HomeCoinListHeaders
 import com.smh.home.ui.components.HomeCoinsList
@@ -47,7 +49,7 @@ fun HomeScreen(
 }
 
 @Composable
-private fun HomeContent(
+internal fun HomeContent(
     uiState: HomeUiState,
     onUserEvent: (HomeUserEvent) -> Unit
 ) {
@@ -92,7 +94,7 @@ private fun HomeContent(
                 value = uiState.searchQuery,
                 onClear = { onUserEvent(HomeUserEvent.OnSearchQueryChange("")) },
                 onValueChanged = { onUserEvent(HomeUserEvent.OnSearchQueryChange(it)) },
-                placeholder = "Search symbol or name",
+                placeholder = stringResource(id = R.string.search_placeholder),
                 modifier = Modifier
                     .padding(
                         horizontal = dimensions.horizontalSpace,

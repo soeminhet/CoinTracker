@@ -11,11 +11,14 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import com.smh.design.extension.noRippleClick
 import com.smh.design.theme.CoinTrackerTheme
 import com.smh.design.theme.dimensions
 import com.smh.design.utility.DayPreview
 import com.smh.design.utility.NightPreview
+import com.smh.home.R
 import com.smh.home.domain.model.CoinModel
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -30,6 +33,7 @@ fun HomeCoinsList(
         modifier = modifier
             .animateContentSize()
             .fillMaxSize()
+            .testTag(stringResource(id = R.string.homeCoinList_test_tag))
     ) {
         items(
             items = coins,

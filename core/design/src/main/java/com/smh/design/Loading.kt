@@ -27,6 +27,9 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
@@ -62,7 +65,8 @@ private fun Loading(
     modifier: Modifier = Modifier,
     tint: Color = MaterialTheme.colorScheme.primary,
     itemCount: Int = 10,
-    animationDuration: Int = 1000
+    animationDuration: Int = 1000,
+    contentDesc: String = stringResource(id = R.string.loadingDesc)
 ) {
     val infiniteTransition = rememberInfiniteTransition(label = "")
     val angle by infiniteTransition.animateFloat(
@@ -75,7 +79,13 @@ private fun Loading(
         label = "Angle"
     )
 
-    Canvas(modifier = modifier.size(30.dp)) {
+    Canvas(
+        modifier = modifier
+            .size(30.dp)
+            .semantics {
+                contentDescription = contentDesc
+            }
+    ) {
         val canvasWidth = size.width
         val canvasHeight = size.height
         val itemWidth = size.width * 0.25f

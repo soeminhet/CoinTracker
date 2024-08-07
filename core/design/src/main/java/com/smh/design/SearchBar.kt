@@ -32,7 +32,9 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -98,6 +100,7 @@ fun SearchBar(
         ) {
             BasicTextField(
                 modifier = Modifier
+                    .testTag(stringResource(id = R.string.search_test_tag))
                     .fillMaxWidth()
                     .focusRequester(focusRequester)
                     .onFocusChanged { isFocused = it.isFocused },
@@ -131,7 +134,7 @@ fun SearchBar(
             Box(
                 modifier = Modifier
                     .size(dimensions.size48)
-                    .noRippleClick{
+                    .noRippleClick {
                         onClear()
                         focusManager.clearFocus()
                     },
