@@ -47,7 +47,9 @@ import com.smh.design.theme.CoinTrackerTheme
 import com.smh.design.theme.LightGray
 import com.smh.design.theme.dimensions
 import com.smh.design.utility.DayPreview
+import com.smh.design.utility.DayTallPreview
 import com.smh.design.utility.NightPreview
+import com.smh.design.utility.NightTallPreview
 import com.smh.home.R
 
 @Composable
@@ -311,8 +313,7 @@ private fun SettingsDeveloperSection(modifier: Modifier = Modifier) {
     }
 }
 
-@DayPreview
-@Preview(heightDp = 2000)
+@DayTallPreview
 @Composable
 private fun SettingsContentPreview() {
     CoinTrackerTheme {
@@ -322,8 +323,7 @@ private fun SettingsContentPreview() {
     }
 }
 
-@NightPreview
-@Preview(heightDp = 2000)
+@NightTallPreview
 @Composable
 private fun SettingsContentNightPreview() {
     CoinTrackerTheme {
