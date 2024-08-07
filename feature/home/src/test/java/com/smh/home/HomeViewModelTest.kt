@@ -66,7 +66,7 @@ internal class HomeViewModelTest {
     }
 
     @Test
-    fun `Test home view model`() = runTest {
+    fun `HomeViewModel UiState Test`() = runTest {
         homeViewModel.uiState.test {
             val emission1 = awaitItem()
             assertThat(emission1.loading).isFalse()

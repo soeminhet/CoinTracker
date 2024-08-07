@@ -1,4 +1,4 @@
-package com.smh.home.helper
+package com.smh.detail.helper
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

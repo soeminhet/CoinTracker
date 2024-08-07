@@ -7,8 +7,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * https://api.coingecko.com/api/v3/coins/bitcoin?
- * localization=false&tickers=false&community_data=false&developer_data=false&sparkline=true
+ * https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=true
  */
 interface DetailApi {
     @GET("coins/{id}")
