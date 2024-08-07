@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.compose.dropUnlessResumed
@@ -28,6 +29,8 @@ import com.smh.detail.ui.component.CoinDetailStatistics
 import com.smh.detail.ui.component.CoinDetailTitleText
 import com.smh.detail.ui.component.CoinDetailTopBar
 import com.smh.design.UrlButton
+import com.smh.design.utility.DayTallPreview
+import com.smh.detail.R
 import com.smh.detail.ui.component.SparkLine7dChartView
 import kotlinx.coroutines.delay
 
@@ -55,7 +58,7 @@ fun CoinDetailScreen(
 }
 
 @Composable
-private fun CoinDetailContent(
+internal fun CoinDetailContent(
     uiState: CoinDetailUiState,
     onUserEvent: (CoinDetailUserEvent) -> Unit
 ) {
@@ -75,7 +78,7 @@ private fun CoinDetailContent(
     ) {
         Crossfade(
             targetState = uiState.coinDetail,
-            label = "CoinDetail",
+            label = stringResource(id = R.string.coin_detail_label),
             modifier = Modifier
                 .padding(it)
                 .fillMaxSize()
@@ -94,57 +97,57 @@ private fun CoinDetailContent(
                         endDate = "21/06/24"
                     )
 
-                    CoinDetailTitleText(text = "Overview")
+                    CoinDetailTitleText(text = stringResource(id = R.string.overview_title))
 
                     CoinDetailDescription(
                         text = detail.description
                     )
 
                     CoinDetailStatistics(
-                        leadingStatLabel = "Current Price",
+                        leadingStatLabel = stringResource(id = R.string.current_price_label),
                         leadingStatValue = detail.currentPrice.asCurrencyWith6Decimals(),
                         leadingStatPercentageChange = null,
-                        trailingStatLabel = "Market Capitalization",
+                        trailingStatLabel = stringResource(id = R.string.market_cap_label),
                         trailingStatValue = detail.marketCap.formattedWithAbbreviations(),
                         trailingStatPercentageChange = null,
                     )
 
                     CoinDetailStatistics(
-                        leadingStatLabel = "Rank",
+                        leadingStatLabel = stringResource(id = R.string.rank_label),
                         leadingStatValue = detail.marketCapRank.toString(),
                         leadingStatPercentageChange = null,
-                        trailingStatLabel = "Volume",
+                        trailingStatLabel = stringResource(id = R.string.volume_label),
                         trailingStatValue = detail.totalVolume.formattedWithAbbreviations(),
                         trailingStatPercentageChange = null,
                     )
 
                     HorizontalDivider(modifier = Modifier.padding(vertical = dimensions.space24))
 
-                    CoinDetailTitleText(text = "Additional")
+                    CoinDetailTitleText(text = stringResource(id = R.string.additional_title))
 
                     CoinDetailStatistics(
-                        leadingStatLabel = "24h High",
+                        leadingStatLabel = stringResource(id = R.string.twenty_four_h_high_label),
                         leadingStatValue = detail.high24h.asCurrencyWith6Decimals(),
                         leadingStatPercentageChange = detail.priceChangePercentage24h,
-                        trailingStatLabel = "24h Low",
+                        trailingStatLabel = stringResource(id = R.string.twenty_four_h_low_label),
                         trailingStatValue = detail.low24h.asCurrencyWith6Decimals(),
                         trailingStatPercentageChange = detail.marketCapChangePercentage24h,
                     )
 
                     CoinDetailStatistics(
-                        leadingStatLabel = "24h Price Change",
+                        leadingStatLabel = stringResource(id = R.string.twenty_four_h_price_change_label),
                         leadingStatValue = detail.priceChange24h.asCurrencyWith6Decimals(),
                         leadingStatPercentageChange = detail.priceChangePercentage24h,
-                        trailingStatLabel = "24h MarketCap Change",
+                        trailingStatLabel = stringResource(id = R.string.twenty_four_h_marketcap_change_label),
                         trailingStatValue = detail.marketCapChange24h.formattedWithAbbreviations(),
                         trailingStatPercentageChange = detail.marketCapChangePercentage24h,
                     )
 
                     CoinDetailStatistics(
-                        leadingStatLabel = "Block Time",
+                        leadingStatLabel = stringResource(id = R.string.block_time_label),
                         leadingStatValue = detail.blockTimeInMinutes.toString(),
                         leadingStatPercentageChange = null,
-                        trailingStatLabel = "Hashing Algorithm",
+                        trailingStatLabel = stringResource(id = R.string.hashing_algorithm_label),
                         trailingStatValue = detail.hashingAlgorithm,
                         trailingStatPercentageChange = null,
                     )
@@ -152,13 +155,13 @@ private fun CoinDetailContent(
                     HorizontalDivider(modifier = Modifier.padding(top = dimensions.space24))
 
                     UrlButton(
-                        text = "Website",
+                        text = stringResource(id = R.string.website_label),
                         url = detail.websiteUrl,
                         modifier = Modifier.padding(horizontal = dimensions.space8)
                     )
 
                     UrlButton(
-                        text = "Reddit",
+                        text = stringResource(id = R.string.website_label),
                         url = detail.redditUrl,
                         modifier = Modifier.padding(horizontal = dimensions.space8)
                     )
@@ -172,9 +175,10 @@ sealed interface CoinDetailUserEvent {
     data object OnBack : CoinDetailUserEvent
 }
 
+@DayTallPreview
 @NightTallPreview
 @Composable
-private fun CoinDetailScreenPreview() {
+private fun CoinDetailScreenNightPreview() {
     CoinTrackerTheme {
         CoinDetailContent(
             uiState = CoinDetailUiState(coinDetail = CoinDetailModel.btc),

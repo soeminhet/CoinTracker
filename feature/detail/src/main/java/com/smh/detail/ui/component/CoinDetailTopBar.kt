@@ -82,23 +82,9 @@ fun CoinDetailTopBar(
 }
 
 @DayPreview
-@Composable
-private fun CoinDetailTopBarPreview(){
-    CoinTrackerTheme {
-        Surface {
-            CoinDetailTopBar(
-                name = CoinDetailModel.btc.name,
-                symbol = CoinDetailModel.btc.symbol,
-                image = CoinDetailModel.btc.image,
-                onBackClick = {}
-            )
-        }
-    }
-}
-
 @NightPreview
 @Composable
-private fun CoinDetailTopBarNightPreview(){
+private fun CoinDetailTopBarPreview(){
     CoinTrackerTheme {
         Surface {
             CoinDetailTopBar(

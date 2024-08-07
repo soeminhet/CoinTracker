@@ -59,18 +59,9 @@ fun CoinDetailDescription(
 }
 
 @DayPreview
-@Composable
-private fun CoinDetailDescriptionPreview(){
-    CoinTrackerTheme {
-        Surface {
-            CoinDetailDescription(text = CoinDetailModel.btc.description)
-        }
-    }
-}
-
 @NightPreview
 @Composable
-private fun CoinDetailDescriptionNightPreview(){
+private fun CoinDetailDescriptionPreview(){
     CoinTrackerTheme {
         Surface {
             CoinDetailDescription(text = CoinDetailModel.btc.description)

@@ -29,6 +29,7 @@ import com.smh.design.theme.CoinTrackerTheme
 import com.smh.design.theme.GreenAdaptive
 import com.smh.design.theme.RedAdaptive
 import com.smh.design.utility.DayPreview
+import com.smh.design.utility.NightPreview
 import com.smh.design.utility.asCurrencyWithAbbreviations
 import com.smh.detail.domain.model.CoinDetailModel
 import kotlinx.coroutines.delay
@@ -147,6 +148,7 @@ fun SparkLine7dChartView(
     }
 }
 
+@NightPreview
 @DayPreview
 @Composable
 private fun SparkLine7dChartViewPreview() {

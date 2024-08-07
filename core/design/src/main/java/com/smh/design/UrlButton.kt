@@ -32,21 +32,9 @@ fun UrlButton(
 }
 
 @DayPreview
-@Composable
-private fun UrlButtonPreview(){
-    CoinTrackerTheme {
-        Surface {
-            UrlButton(
-                text = "Website",
-                url = "https://www.google.com"
-            )
-        }
-    }
-}
-
 @NightPreview
 @Composable
-private fun UrlButtonNightPreview(){
+private fun UrlButtonPreview(){
     CoinTrackerTheme {
         Surface {
             UrlButton(

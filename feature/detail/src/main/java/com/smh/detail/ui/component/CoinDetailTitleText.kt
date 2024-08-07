@@ -32,18 +32,9 @@ fun CoinDetailTitleText(
 }
 
 @DayPreview
-@Composable
-private fun CoinDetailTitleTextPreview(){
-    CoinTrackerTheme {
-        Surface {
-            CoinDetailTitleText(text = "Overall")
-        }
-    }
-}
-
 @NightPreview
 @Composable
-private fun CoinDetailTitleTextNightPreview(){
+private fun CoinDetailTitleTextPreview(){
     CoinTrackerTheme {
         Surface {
             CoinDetailTitleText(text = "Overall")

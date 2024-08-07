@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="coin_detail_label">CoinDetail</string>
+    <string name="overview_title">Overview</string>
+    <string name="additional_title">Additional</string>
+    <string name="current_price_label">Current Price</string>
+    <string name="market_cap_label">Market Capitalization</string>
+    <string name="rank_label">Rank</string>
+    <string name="volume_label">Volume</string>
+    <string name="twenty_four_h_high_label">24h High</string>
+    <string name="twenty_four_h_low_label">24h Low</string>
+    <string name="twenty_four_h_price_change_label">24h Price Change</string>
+    <string name="twenty_four_h_marketcap_change_label">24h MarketCap Change</string>
+    <string name="block_time_label">Block Time</string>
+    <string name="hashing_algorithm_label">Hashing Algorithm</string>
+    <string name="website_label">Website</string>
+    <string name="reddit_label">Reddit</string>"
+</resources>

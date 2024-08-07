@@ -48,25 +48,9 @@ fun CoinDetailStatistics(
 }
 
 @DayPreview
-@Composable
-private fun CoinDetailStatisticsPreview() {
-    CoinTrackerTheme {
-        Surface {
-            CoinDetailStatistics(
-                leadingStatLabel = "24h Volume",
-                leadingStatValue = "$123,456,789",
-                leadingStatPercentageChange = 2.3,
-                trailingStatLabel = "Market Cap",
-                trailingStatValue = "$123,456,789",
-                trailingStatPercentageChange = 2.3
-            )
-        }
-    }
-}
-
 @NightPreview
 @Composable
-private fun CoinDetailStatisticsNightPreview() {
+private fun CoinDetailStatisticsPreview() {
     CoinTrackerTheme {
         Surface {
             CoinDetailStatistics(
