@@ -1,4 +1,4 @@
-package com.smh.testing
+package com.smh.detail.helper
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

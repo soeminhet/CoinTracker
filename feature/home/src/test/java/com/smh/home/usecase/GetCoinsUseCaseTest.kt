@@ -9,8 +9,8 @@ import com.smh.home.domain.usecase.GetCoinsUseCase
 import com.smh.home.fake.HomeRepositoryFake
 import com.smh.home.fake.btc
 import com.smh.home.fake.eth
+import com.smh.home.helper.TestCoroutineExtension
 import com.smh.network.usecase.executeEmpty
-import com.smh.testing.TestCoroutineExtension
 import com.smh.testing.apiException
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest

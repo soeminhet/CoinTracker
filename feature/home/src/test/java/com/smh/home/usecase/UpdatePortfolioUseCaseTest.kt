@@ -7,7 +7,7 @@ import assertk.assertions.isEqualTo
 import com.smh.home.domain.usecase.UpdatePortfolioUseCase
 import com.smh.home.fake.HomeRepositoryFake
 import com.smh.home.fake.btc
-import com.smh.testing.TestCoroutineExtension
+import com.smh.home.helper.TestCoroutineExtension
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
