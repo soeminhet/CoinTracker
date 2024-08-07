@@ -21,6 +21,9 @@ import com.smh.detail.domain.model.CoinDetailModel
 import com.smh.detail.ui.CoinDetailContent
 import com.smh.detail.ui.CoinDetailUiState
 import com.smh.testing.getString
+import com.smh.testing.tagIsDisplay
+import com.smh.testing.textIsDisplay
+import com.smh.testing.textToScrollAndIsDisplay
 import org.junit.Rule
 import org.junit.Test
 
@@ -47,18 +50,13 @@ class CoinDetailScreenTest {
             onNodeWithContentDescription(getString(com.smh.design.R.string.loadingDesc))
                 .assertDoesNotExist()
 
-            onNodeWithTag(getString(R.string.sparkline_test_tag))
-                .assertIsDisplayed()
+            tagIsDisplay(getString(R.string.sparkline_test_tag))
 
-            onNodeWithText(getString(R.string.overview_title))
-                .assertIsDisplayed()
+            textIsDisplay(getString(R.string.overview_title))
 
-            onNodeWithTag(getString(R.string.description_test_tag))
-                .assertIsDisplayed()
+            tagIsDisplay(getString(R.string.description_test_tag))
 
-            onNodeWithText(getString(R.string.current_price_label))
-                .performScrollTo()
-                .assertIsDisplayed()
+            textToScrollAndIsDisplay(getString(R.string.current_price_label))
 
             textIsDisplay(getString(R.string.market_cap_label))
 
@@ -80,11 +78,11 @@ class CoinDetailScreenTest {
 
             textIsDisplay(getString(R.string.hashing_algorithm_label))
 
-//            onNodeWithText(getString(R.string.website_label), substring = true, useUnmergedTree = true)
-//                .assertIsDisplayed()
-//
-//            textToScrollAndIsDisplay(getString(R.string.reddit_label), true)
-//                .assertHasClickAction()
+            textToScrollAndIsDisplay(getString(R.string.website_label))
+                .assertHasClickAction()
+
+            textToScrollAndIsDisplay(getString(R.string.reddit_label))
+                .assertHasClickAction()
         }
     }
 }
@@ -101,14 +99,5 @@ private fun AndroidComposeTestRule<ActivityScenarioRule<ComponentActivity>, Comp
     waitForIdle()
 }
 
-private fun SemanticsNodeInteractionsProvider.textToScrollAndIsDisplay(text: String, substring: Boolean = false): SemanticsNodeInteraction {
-    return onNodeWithText(text, substring = substring)
-        .performScrollTo()
-        .assertIsDisplayed()
-}
 
-private fun SemanticsNodeInteractionsProvider.textIsDisplay(text: String): SemanticsNodeInteraction {
-    return onNodeWithText(text)
-        .assertIsDisplayed()
-}
 
