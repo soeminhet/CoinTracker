@@ -16,11 +16,13 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import com.smh.design.ImageLoader
 import com.smh.design.theme.CoinTrackerTheme
 import com.smh.design.theme.dimensions
 import com.smh.design.utility.DayPreview
 import com.smh.design.utility.NightPreview
+import com.smh.detail.R
 import com.smh.detail.domain.model.CoinDetailModel
 
 @Composable
@@ -45,12 +47,12 @@ fun CoinDetailTopBar(
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.KeyboardArrowLeft,
-                    contentDescription = "Back",
+                    contentDescription = stringResource(id = R.string.back),
                     tint = MaterialTheme.colorScheme.primary
                 )
 
                 Text(
-                    text = "Back",
+                    text = stringResource(id = R.string.back),
                     color = MaterialTheme.colorScheme.primary
                 )
             }

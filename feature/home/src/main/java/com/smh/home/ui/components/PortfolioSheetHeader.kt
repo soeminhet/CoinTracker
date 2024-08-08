@@ -23,11 +23,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.res.stringResource
 import com.smh.design.theme.CoinTrackerTheme
 import com.smh.design.theme.GreenAdaptive
 import com.smh.design.theme.dimensions
 import com.smh.design.utility.DayPreview
 import com.smh.design.utility.NightPreview
+import com.smh.home.R
 
 @Composable
 fun PortfolioSheetHeader(
@@ -49,7 +51,7 @@ fun PortfolioSheetHeader(
         ) {
             Icon(
                 imageVector = Icons.Default.Close,
-                contentDescription = "Close"
+                contentDescription = stringResource(id = R.string.close)
             )
         }
 
@@ -83,7 +85,7 @@ fun PortfolioSheetHeader(
                     ),
                     modifier = Modifier.graphicsLayer { alpha = saveButtonAlpha }
                 ) {
-                    Text(text = "SAVE")
+                    Text(text = stringResource(id = R.string.save))
                 }
             }
         }

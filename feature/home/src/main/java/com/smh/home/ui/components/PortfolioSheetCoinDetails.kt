@@ -12,6 +12,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -20,6 +22,7 @@ import com.smh.design.theme.dimensions
 import com.smh.design.utility.DayPreview
 import com.smh.design.utility.NightPreview
 import com.smh.design.utility.asCurrencyWith6Decimals
+import com.smh.home.R
 import com.smh.home.domain.model.CoinModel
 
 @Composable
@@ -81,7 +84,7 @@ private fun PortfolioSheetDetailRow(
                     keyboardType = KeyboardType.Decimal,
                     imeAction = ImeAction.Done
                 ),
-
+                modifier = Modifier.testTag(stringResource(id = R.string.portfolio_amount_test_tag))
             )
         } else {
             Text(

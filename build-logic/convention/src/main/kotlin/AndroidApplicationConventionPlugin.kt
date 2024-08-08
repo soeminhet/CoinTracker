@@ -24,7 +24,6 @@ class AndroidApplicationConventionPlugin: Plugin<Project> {
                 defaultConfig {
                     minSdk = CoinTrackerProject.minSdk
                     targetSdk = CoinTrackerProject.targetSdk
-                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
                     vectorDrawables {
                         useSupportLibrary = true
                     }

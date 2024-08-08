@@ -11,4 +11,7 @@
     <string name="infoAndAddCircleDesc">HomeInfoAndAddCircleButton</string>
 
     <string name="homeCoinList_test_tag">HomeCoinsList</string>
+    <string name="portfolio_amount_test_tag">PortfolioAmount</string>
+    <string name="close">Close</string>
+    <string name="save">Save</string>
 </resources>

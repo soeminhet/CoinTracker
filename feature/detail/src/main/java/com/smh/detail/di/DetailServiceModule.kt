@@ -1,6 +1,6 @@
-package com.smh.home.di
+package com.smh.detail.di
 
-import com.smh.home.data.service.HomeApi
+import com.smh.detail.data.service.DetailApi
 import com.smh.network.createService
 import dagger.Module
 import dagger.Provides
@@ -11,10 +11,10 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object ServiceModule {
+object DetailServiceModule {
     @Provides
     @Singleton
-    fun provideHomeService(retrofit: Retrofit): HomeApi {
+    fun provideDetailService(retrofit: Retrofit): DetailApi {
         return retrofit.createService()
     }
 }

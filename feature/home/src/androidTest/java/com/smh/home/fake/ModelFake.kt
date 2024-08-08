@@ -38,6 +38,13 @@ internal val usdt = CoinModel(
     holdingAmount = null
 )
 
+internal val global = GlobalModel(
+    marketCapChangePercentage = 0.55,
+    marketCap = "1.2TR",
+    btcDominance = "40%",
+    volume = "200Bn"
+)
+
 internal val marketCapStat = StatisticModel(
     id = 1,
     title = "Market Cap",

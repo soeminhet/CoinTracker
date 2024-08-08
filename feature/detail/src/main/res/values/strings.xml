@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="back">Back</string>
     <string name="coin_detail_label">CoinDetail</string>
     <string name="overview_title">Overview</string>
     <string name="additional_title">Additional</string>

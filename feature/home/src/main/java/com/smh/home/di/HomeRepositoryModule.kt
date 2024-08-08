@@ -9,7 +9,7 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class RepositoryModule {
+abstract class HomeRepositoryModule {
     @Binds
     abstract fun bindHomeRepository(
         homeRepositoryImpl: HomeRepositoryImpl

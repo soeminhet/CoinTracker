@@ -1,4 +1,4 @@
-package com.smh.detail.fake
+package com.smh.cointracker.fake
 
 import arrow.core.Either
 import com.smh.detail.domain.datasource.DetailRemoteDataSource

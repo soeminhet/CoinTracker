@@ -95,7 +95,7 @@ private fun SettingsSheetContent(
                 ) {
                     Icon(
                         imageVector = Icons.Default.Close,
-                        contentDescription = "Close"
+                        contentDescription = stringResource(id = R.string.close)
                     )
                 }
 

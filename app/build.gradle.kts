@@ -12,7 +12,7 @@ android {
         applicationId = "com.smh.cointracker"
         versionCode = 1
         versionName = "1.0"
-        testInstrumentationRunner = "com.smh.cointracker.HiltTestRunner"
+        testInstrumentationRunner = "com.smh.cointracker.helper.HiltTestRunner"
     }
 
     buildTypes {
@@ -35,10 +35,12 @@ dependencies {
     implementation(project(":core:design"))
     implementation(project(":feature:home"))
     implementation(project(":feature:detail"))
+    implementation(project(":core:testing"))
+    implementation(project(":core:network"))
 
     implementation(libs.androidx.core.splashscreen)
+    implementation(libs.arrow)
 
     testImplementation(libs.junit)
     debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
 }

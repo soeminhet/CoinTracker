@@ -1,4 +1,4 @@
-package com.smh.cointracker
+package com.smh.cointracker.helper
 
 import android.app.Application
 import android.content.Context

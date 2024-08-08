@@ -16,10 +16,10 @@
       <SelectionState runConfigName="Tests in 'com.smh.home'">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="show_loadingSpinner()">
+      <SelectionState runConfigName="AppTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="show_coinDetail()">
+      <SelectionState runConfigName="testApp()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
