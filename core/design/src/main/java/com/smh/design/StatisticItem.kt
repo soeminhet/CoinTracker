@@ -70,7 +70,7 @@ fun StatisticItem(
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(start = dimensions.space4),
-                    color = RedAdaptive
+                    color = if (percentageChange > 0) GreenAdaptive else RedAdaptive
                 )
             }
         }
