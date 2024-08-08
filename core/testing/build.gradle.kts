@@ -5,15 +5,6 @@ plugins {
 
 android {
     namespace = "com.smh.testing"
-
-    packaging {
-        resources {
-            excludes.add("META-INF/LICENSE.md")
-            excludes.add("META-INF/LICENSE.txt")
-            excludes.add("META-INF/NOTICE.md")
-            excludes.add("META-INF/NOTICE.txt")
-        }
-    }
 }
 
 dependencies {

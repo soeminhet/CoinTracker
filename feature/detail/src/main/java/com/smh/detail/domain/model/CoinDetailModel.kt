@@ -1,5 +1,14 @@
 package com.smh.detail.domain.model
 
+import com.smh.annotation.NXDateTimeExtension
+import com.smh.annotation.NXStringToDate
+import com.smh.annotation.changeFormatDate
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
+import java.util.Calendar
+import java.util.Locale
+
+@NXDateTimeExtension
 data class CoinDetailModel(
     val id: String,
     val symbol: String,
@@ -20,8 +29,21 @@ data class CoinDetailModel(
     val priceChangePercentage24h: Double,
     val marketCapChange24h: Double,
     val marketCapChangePercentage24h: Double,
-    val sparkline: List<Double>
+    val sparkline: List<Double>,
+    @NXStringToDate(originPattern = "yyyy-MM-dd'T'HH:mm:ss")
+    val lastUpdated: String
 ) {
+    val endDate: String get() = nx_date_lastUpdated.changeFormatDate(targetPattern = "dd-MM-yyyy")
+
+    val startDate: String get() {
+        if (nx_date_lastUpdated == null) return ""
+        val calendar = Calendar.getInstance()
+        calendar.time = nx_date_lastUpdated!!
+        calendar.add(Calendar.DAY_OF_YEAR, -7)
+        val formatter = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        return formatter.format(calendar.time)
+    }
+
     companion object {
         val btc = CoinDetailModel(
             id = "bitcoin",
@@ -212,7 +234,8 @@ data class CoinDetailModel(
                 66623.85624202447,
                 66566.6291426702,
                 66642.59233018276
-            )
+            ),
+            lastUpdated = "2024-08-07T05:09:52.124Z"
         )
     }
 }

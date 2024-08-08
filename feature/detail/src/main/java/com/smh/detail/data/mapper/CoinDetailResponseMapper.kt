@@ -27,5 +27,6 @@ fun CoinDetailResponse.toDomain(): CoinDetailModel {
         marketCapChange24h = marketData?.marketCapChange24h.ifNullZero(),
         marketCapChangePercentage24h = marketData?.marketCapChangePercentage24h.ifNullZero(),
         sparkline = marketData?.sparkline7d?.price.orEmpty(),
+        lastUpdated = lastUpdated.orEmpty()
     )
 }

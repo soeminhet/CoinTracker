@@ -94,8 +94,8 @@ internal fun CoinDetailContent(
                 ) {
                     SparkLine7dChartView(
                         data = detail.sparkline,
-                        startDate = "14/06/24",
-                        endDate = "21/06/24",
+                        startDate = detail.startDate,
+                        endDate = detail.endDate,
                         modifier = Modifier.testTag(stringResource(id = R.string.sparkline_test_tag))
                     )
 

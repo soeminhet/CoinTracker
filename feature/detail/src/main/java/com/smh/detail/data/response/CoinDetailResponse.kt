@@ -25,6 +25,8 @@ data class CoinDetailResponse(
     val marketCapRank: Int?,
     @SerialName("market_data")
     val marketData: CoinDetailMarketDataResponse?,
+    @SerialName("last_updated")
+    val lastUpdated: String?,
 )
 
 @Serializable
