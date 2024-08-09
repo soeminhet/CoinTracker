@@ -19,6 +19,7 @@ materialVersion = "1.12.0"
 mockk = "1.13.4"
 mockwebserver = "4.11.0"
 navigationCompose = "2.8.0-beta05"
+profileinstaller = "1.3.1"
 retrofit = "2.9.0"
 retrofitKotlinxSerializationJson = "1.0.0"
 kotlinxSerializationJson = "1.6.3"
@@ -38,6 +39,9 @@ junitJupiter = "5.9.3"
 junit5Plugin = "1.9.3.0"
 turbine = "1.1.0"
 kotlinpoetKsp = "1.17.0"
+uiautomator = "2.3.0"
+benchmarkMacroJunit4 = "1.2.4"
+androidxMacroBenchmark = "1.2.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +49,7 @@ androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", versi
 androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeKtx" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+androidx-profileinstaller = { module = "androidx.profileinstaller:profileinstaller", version.ref = "profileinstaller" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -99,6 +104,8 @@ core-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "coreKtxV
 
 symbol-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
 kotlinpoet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlinpoetKsp" }
+androidx-uiautomator = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomator" }
+androidx-benchmark-macro-junit4 = { group = "androidx.benchmark", name = "benchmark-macro-junit4", version.ref = "benchmarkMacroJunit4" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -111,6 +118,7 @@ com-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltA
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 room = { id = "androidx.room", version.ref = "room" }
 junit5 = { id = "de.mannodermaus.android-junit5", version.ref = "junit5Plugin"}
+baselineprofile = { id = "androidx.baselineprofile", version.ref = "androidxMacroBenchmark"}
 
 com-cointracker-hilt = { id = "com.cointracker.hilt", version.ref = "customPlugin" }
 com-cointracker-library = { id = "com.cointracker.library", version.ref = "customPlugin"}
@@ -121,4 +129,5 @@ com-cointracker-room = { id = "com.cointracker.room", version.ref = "customPlugi
 com-cointracker-application = { id = "com.cointracker.application", version.ref = "customPlugin"}
 com-cointracker-unittest = { id = "com.cointracker.unittest", version.ref = "customPlugin"}
 com-cointracker-uitest = { id = "com.cointracker.uitest", version.ref = "customPlugin" }
+android-test = { id = "com.android.test", version.ref = "agp" }
 

@@ -7,6 +7,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.NavHost
@@ -24,6 +28,7 @@ import kotlinx.coroutines.delay
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalComposeUiApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
@@ -52,7 +57,8 @@ class MainActivity : ComponentActivity() {
                             enterTransition = { slideNavTransition.enterTransition },
                             exitTransition = { slideNavTransition.exitTransition },
                             popEnterTransition = { slideNavTransition.popEnterTransition },
-                            popExitTransition = { slideNavTransition.popExitTransition }
+                            popExitTransition = { slideNavTransition.popExitTransition },
+                            modifier = Modifier.semantics { testTagsAsResourceId = true }
                         ) {
                             homeRoute(navController)
                             coinDetailRoute(navController)
