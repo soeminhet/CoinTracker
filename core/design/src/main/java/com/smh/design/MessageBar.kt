@@ -38,13 +38,14 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
 object MessageBar {
-    private val _state = MutableSharedFlow<String>()
+    private val _state = MutableSharedFlow<String>(
+        replay = 1,
+        extraBufferCapacity = 1
+    )
     val state = _state.asSharedFlow()
 
-    fun showMessage(message: String) {
-        CoroutineScope(Dispatchers.IO).launch {
-            _state.emit(message)
-        }
+    fun showMessage(message: String): Boolean {
+        return _state.tryEmit(message)
     }
 }
 
